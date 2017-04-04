@@ -1,0 +1,227 @@
+.fa-font {
+    font-family: FontAwesome;
+    src: url("fonts/FontAwesome.otf");
+}
+
+.fa-font:before {
+	display: none;
+}
+
+.row {
+  margin: 0;
+}
+.imgtemp {
+  height 200px;
+  width: 200px;
+	margin-top: 30px;
+	border: 1px solid rgba(49, 49, 49, 0.24);
+	box-shadow: 3px 3px 5px rgba(119, 119, 119, 0.6);
+}
+/* Header */
+.page-header {
+  margin: 0;
+  background-color: #fff;
+  box-shadow: 0 0 20px #999;
+}
+
+.fa-angle-left {
+  font-weight: bolder;
+}
+
+.fa-plus {
+  -webkit-text-stroke: 3px white
+}
+
+.fa-gradient {
+	background: linear-gradient(to bottom right, #5F77D2, #7B8CD6);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* Page */
+.page {
+  margin: 80px 0;
+  padding: 0;
+}
+
+.tile {
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  padding: 15px 0;
+}
+
+.loginfield {
+  margin: 0 auto;
+  max-width: 350px;
+  height: 50px;
+  text-align: center;
+  font-size: 22px;
+  border: 3px solid #E72B12;
+  background: linear-gradient(to bottom right, rgba(231, 43, 18, 0.4), rgba(235, 110, 106, 0.4));
+}
+
+option {
+	background-color: #f6b6af;
+}
+
+.form-control:focus {
+  border-color: #E72B12;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(231, 43, 18, 0.6);
+}
+
+.loginbutton {
+  margin-top: 25px;
+  max-width: 350px;
+  width: 100%;
+  font-size: 18px;
+  background: linear-gradient(to right, #E72B12, #EB6E6A);
+}
+
+.item-text, .item-text:hover, .item-text:visited {
+  color: #fff;
+  font-size: 3.7vh;
+  text-decoration: none;
+}
+
+.content-text, .content-text:hover, .content-text:visited {
+  color: #313131;
+  font-size: 3.7vh;
+  text-decoration: none;
+}
+
+.item-button {
+  height: 6vh;
+  padding: 0;
+  float: right;
+  margin: 0 -16px;
+}
+
+a > p > .fa {
+  color: #fff;
+  font-size: 4vh;
+  padding-top: 1.5vh;
+  margin: 2vh 0;
+}
+
+/* Footer */
+.page-footer {
+  margin: 0;
+  box-shadow: 0 0 20px #999;
+}
+
+.calendar {
+  background: linear-gradient(#FABC18, #FAD15D);
+}
+
+.warning {
+  background: linear-gradient(#E72B12, #EB6E6A);
+}
+
+.warning-item {
+  background: linear-gradient(to right, #E72B12, #EB6E6A);
+}
+
+.information {
+  background: linear-gradient(#3DC2D9, #8FCEE2);
+}
+
+.call {
+  background: linear-gradient(#7CBD1B, #B0D248);
+}
+
+.footer-tile {
+  padding: 15px 0;
+}
+
+.menu-icon, .menu-icon:hover, .menu-icon:active {
+  color: #fff;
+  font-size: 5vh;
+  text-align: center;
+  text-decoration: none;
+}
+
+.opened {
+    position: fixed;
+    left: 25%;
+    bottom: 1%;
+    z-index: 1030;
+    box-shadow: 0 0 20px #999;
+}
+
+.add-show {
+  display: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+label {
+  font-size: 22px;
+}
+
+.page-container {
+  max-width: 375px;
+}
+
+ol, ul {
+    margin-left: -38px;
+}
+
+
+.content-div {
+	margin-left: 60px;
+	margin-right: 60px;
+}
+
+.full-item {
+	min-height: 80%;
+	margin: -15px 5px;
+}
+
+.title-row {
+}
+
+.content-row {
+  background: linear-gradient(to right, #F9CAC4, #FADBDA);
+	margin: 0 5px -10px 5px;
+	padding: 10px 0;
+	
+}
+
+.spacer {
+	display: none;
+}
+
+	.full-item {
+		margin: 0 auto;
+}
+
+.btn-header {
+	border: none;
+	background: none;
+}
+
+@media only screen and (min-width:376px) and (max-width: 770px)  {
+	.spacer {
+		display: block;
+		min-height: 50px;
+	}
+}
+
+
+
+
+/* Large devices (large desktops, col-lg and up) */
+@media (min-width: 1200px) {
+  .tile {
+    border: 3px solid #fff;
+  }
+
+  p > .fa {
+    font-size: 9em;
+    margin: 0.7em 0;
+  }
+
+}
+

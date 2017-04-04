@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <title>Toevoegen | Boodschapper app</title>
+    <link rel=icon href=img/logo.jpeg>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/emergency.css">
+  </head>
+  <body>
+    <div class="page-header row navbar-fixed-top">
+      <div class="left-header col-xs-2">
+        
+      </div>
+      <div class="mid-header col-xs-8">
+        <h2 class="text-center">Toevoegen</h2>
+      </div>
+        <div class="left-right col-xs-2">
+        <button id="audioCapture" class="btn-header"><i class="fa fa-microphone fa-gradient"></i></button>
+      </div>
+    </div>
+
+    <div class="row page">
+    <div class="container page-container">
+      <div class="row">
+        <div class="form-group col-xs-12">
+          <label for="noodTitle">Titel:</label>
+          <input type="text" class="form-control loginfield" name="title" id="noodTitle" placeholder="Titel">
+        </div>
+      </div>
+
+      <div class="row">
+          <div class="form-group col-xs-12">
+          <label for="icon">Icoon:</label>
+            <select class="form-control loginfield fa-font" name="icon" id="noodIcon">
+                            <option value="&#xf071;">&#xf071;</option>
+							<option value="&#xf073;">&#xf073;</option>
+							<option value="&#xf05a;">&#xf05a;</option>
+							<option value="&#xf095;">&#xf095;</option>
+							<option value="&#xf249;">&#xf249;</option>
+							<option value="&#xf030;">&#xf030;</option>
+              <option>&#xf0fa;</option>
+            </select>
+        </div>
+
+      <div class="row">
+        <div class="form-group col-xs-12">
+          <label for="noodDesc">Beschrijving:</label>
+          <textarea type="text" class="form-control loginfield" name="description" id="noodDesc" placeholder="Beschrijving"></textarea>
+        </div>
+      </div>
+
+      <div class="row add-show">
+        <div class="form-group col-xs-12">
+          <label for="noodDate">Datum:</label>
+          <input type="date" class="form-control loginfield" name="date" id="noodDate" placeholder="01 / 01 / 2001">
+        </div>
+      </div>
+
+      <div class="row add-show">
+        <div class="form-group col-xs-12">
+          <label for="noodTime">Tijdstip:</label>
+          <input type="time" class="form-control loginfield" name="time" id="noodTime" placeholder="00 : 00">
+        </div>
+      </div>
+
+      <div class="row add-show">
+        <div class="form-group col-xs-12">
+          <label for="noodUrl">Link:</label>
+          <input type="text" class="form-control loginfield" name="url" id="noodUrl" placeholder="www.google.nl">
+        </div>
+      </div>
+
+      <div class="row add-show">
+        <div class="form-group col-xs-12">
+          <label for="noodTel">Telefoonnummer:</label>
+          <input type="text" class="form-control loginfield" name="tel" id="noodTel" placeholder="+316-12345678">
+        </div>
+      </div>
+
+      <div class="row add-show">
+        <div class="form-group col-xs-12">
+          <label for="noodPrio">Prioriteit:</label>
+            <select class="form-control loginfield fa-font" name="prio" id="noodPrio">
+							<option value="laag">Laag</option>
+							<option value="gemiddeld">Gemiddeld</option>
+							<option value="hoog">Hoog</option>
+            </select>
+        </div>
+      </div>
+         
+      <div class="row add-show">
+        <div class="form-group col-xs-12">
+          <label for="inputFile">Bestanden toevoegen:</label>
+          <input type="file" id="inputFile" class="form-control loginfield" name="media" placeholder="Bestand toevoegen.">
+        </div>
+      </div>
+      </div>
+        
+        <audio id="audiodiv" controls></audio>
+        
+      <!-- button -->
+      <div class="row">
+        <div class="col-xs-12 text-center add-hide">
+          <button type="button" class="btn btn-danger loginbutton eventbutton">Meer...</button>
+        </div>
+
+        <div class="col-xs-6 text-center">
+          <button type="button" onclick="addEmergencyItem()" class="btn btn-danger loginbutton">Opslaan</button>
+        </div>
+          <div class="col-xs-6 text-center">
+          <button type="button" onclick="javascript:history.back()" class="btn btn-danger loginbutton">Annuleren</button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.1.1.slim.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Javascript -->
+    <script src="js/pouchdb.min.js"></script>
+    <script src="js/pouchdb.authentication.min.js"></script>
+    <script src="js/pouchdb.find.min.js"></script>
+   <!-- <script src="js/events.js"></script>-->
+    <script src="js/expand.js"></script>
+    <script src="js/globals.js"></script>
+      <script src="js/audio.js"></script>
+    <script src="js/add-emergency-item.js"></script>
+      <script>
+       document.getElementById("audioCapture").addEventListener("click", audioCapture);
+
+      </script>
+  </body>
+</html>
