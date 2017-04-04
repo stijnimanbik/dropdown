@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <title>Aanpassen | Boodschapper app</title>
+    <link rel=icon href=img/logo.jpeg>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/information.css">
+  </head>
+  <body>
+    <div class="page-header row navbar-fixed-top">
+      <div class="left-header col-xs-2">
+        
+      </div>
+      <div class="mid-header col-xs-8">
+        <h2 class="text-center">Aanpassen</h2>
+      </div>
+        <div class="col-xs-2 right-header">
+			<h2>
+				<button id="deletepopup" class="btn-header">
+					<i class="fa fa-trash fa-gradient"></i>
+				</button>
+			</h2>
+		</div>
+    </div>
+
+    <div class="row page">
+    <div class="container page-container">
+      <div class="row">
+        <div class="form-group col-xs-12">
+          <label for="infoTitle">Titel:</label>
+          <input type="text" class="form-control loginfield" name="title" id="infoTitle" placeholder="Titel">
+        </div>
+      </div>
+
+      <div class="row">
+          <div class="form-group col-xs-12">
+          <label for="icon">Icoon:</label>
+            <select class="form-control loginfield fa-font" name="icon" id="infoIcon">
+							<option value="&#xf071;">&#xf071;</option>
+							<option value="&#xf073;">&#xf073;</option>
+							<option value="&#xf05a;">&#xf05a;</option>
+							<option value="&#xf095;">&#xf095;</option>
+							<option value="&#xf249;">&#xf249;</option>
+							<option value="&#xf030;">&#xf030;</option>
+              <option>&#xf0fa;</option>
+            </select>
+        </div>
+
+      <div class="row">
+        <div class="form-group col-xs-12">
+          <label for="infoDesc">Beschrijving:</label>
+          <textarea type="text" class="form-control loginfield" name="description" id="infoDesc" placeholder="Beschrijving"></textarea>
+        </div>
+      </div>
+
+      <div class="row add-show">
+        <div class="form-group col-xs-12">
+          <label for="infoDate">Datum:</label>
+          <input type="date" class="form-control loginfield" name="date" id="infoDate" placeholder="01 / 01 / 2001">
+        </div>
+      </div>
+
+      <div class="row add-show">
+        <div class="form-group col-xs-12">
+          <label for="infoTime">Tijdstip:</label>
+          <input type="time" class="form-control loginfield" name="time" id="infoTime" placeholder="00 : 00">
+        </div>
+      </div>
+          
+      <div class="row add-show">
+        <div class="form-group col-xs-12">
+          <label for="infoUrl">Link:</label>
+          <input type="text" class="form-control loginfield" name="url" id="infoUrl" placeholder="www.google.nl">
+        </div>
+      </div>
+          
+      <div class="row add-show">
+        <div class="form-group col-xs-12">
+          <label for="inputFile">Bestanden toevoegen:</label>
+          <input type="file" class="form-control loginfield" name="media" id="inputFile" placeholder="Bestand toevoegen.">
+        </div>
+      </div>
+      </div>
+
+      <!-- button -->
+      <div class="row">
+        <div class="col-xs-12 text-center add-hide">
+          <button type="button" class="btn btn-primary loginbutton eventbutton">Meer...</button>
+        </div>
+
+        <div class="col-xs-6 text-center">
+          <button type="button" onclick="editInformationItem()" class="btn btn-primary loginbutton">Aanpassen</button>
+        </div>
+          <div class="col-xs-6 text-center">
+          <button type="button" onclick="javascript:history.back()" class="btn btn-primary loginbutton">Annuleren</button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.1.1.slim.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Javascript -->
+    <script src="js/pouchdb.min.js"></script>
+    <script src="js/pouchdb.authentication.min.js"></script>
+      <script src="js/pouchdb.find.min.js"></script>
+      <script src="js/events.js"></script>
+      <script src="js/expand.js"></script>
+     <script src="js/globals.js"></script>
+     <script src="js/edit-information-item.js"></script>
+      <script>
+      setTimeout(function(){fillInfo()},800);
+          
+  	document.getElementById("deletepopup").addEventListener
+  	("click", deletepopup);
+	</script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <title>Log in | Boodschapper app</title>
+    <link rel=icon href=img/logo.jpeg>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+  </head>
+ <body>
+
+		<!-- loader -->
+		<div id="loader">
+			<i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+		</div>
+
+      <!-- header -->
+      <div class="row">
+        <div class="page-header col-xs-12">
+          <h2 class="text-center">Login</h2>
+        </div>
+      </div>
+
+      <!-- logo -->
+      <div class="row">
+        <div class="col-xs-12">
+          <img class="img-responsive logoimg" src="img/logo.jpeg" alt="">
+        </div>
+      </div>
+
+      <!-- input -->
+      <div class="container page-container">
+        <div class="row">
+          <div class="form-group col-xs-12">
+            <label for="newUserName">Gebruikersnaam:</label>
+            <input type="text" class="form-control loginfield" name="userName" id="userName" placeholder="Gebruikersnaam">
+          </div>
+        </div>
+
+        <div class="row add-show passfield">
+          <div class="form-group col-xs-12">
+            <label for="newUserPassword">Wachtoord:</label>
+            <input type="password" class="form-control loginfield" name="userPassword" id="userPassword" placeholder="Wachtwoord">
+          </div>
+        </div>
+
+        <!-- button -->
+        <div class="row">
+          <div class="col-xs-12 text-center add-hide">
+            <a class="submit-link" href="#"><button type="button" class="btn btn-primary loginbutton eventbutton">Volgende</button></a>
+          </div>
+
+          <div class="col-xs-12 text-center add-show">
+            <button type="button" onclick="loginUser()" class="btn btn-primary loginbutton">Inloggen</button>
+          </div>
+        </div>
+
+
+        <div class="pass-tools row col-xs-12">
+          <div class="center-block pass-text">
+            <div class="checkbox-inline add-show">
+              <label class="pass-forgot"><input class="tool-text" type="checkbox" value="remember-me" name="rememberMe" id="rememberMe">&nbsp;Wachtwoord onthouden.</label>
+            </div>
+            <hr class="add-show">
+            <a class="tool-text pass-forgot add-show" href="forgot-password.html">Wachtwoord&nbsp;vergeten?</a>
+            <hr class="add-show">
+            <p>Geen account? <a class="tool-text pass-forgot" href="register.html">Maak er een aan.</a></p>
+          </div>
+        </div>
+      </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.1.1.slim.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Javascript -->
+    <script src="js/pouchdb.min.js"></script>
+    <script src="js/pouchdb.authentication.min.js"></script>
+     <script src="js/pouchdb.find.min.js"></script>
+     <script src="js/globals.js"></script>
+     <script src="js/login-user.js"></script>
+    <script src="js/login.js"></script>
+     <script src="js/checks.js"></script>
+  </body>
+</html>

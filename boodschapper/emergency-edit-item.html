@@ -6,12 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
       <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <title>Toevoegen | Boodschapper app</title>
+    <title>Aanpassen | Boodschapper app</title>
     <link rel=icon href=img/logo.jpeg>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -21,9 +17,6 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" type="text/css" href="css/emergency.css">
-
-    <!-- Dropdown script -->
-    <link rel="stylesheet" type="text/css" href="js/dropdown.js">
   </head>
   <body>
     <div class="page-header row navbar-fixed-top">
@@ -31,11 +24,15 @@
         
       </div>
       <div class="mid-header col-xs-8">
-        <h2 class="text-center">Toevoegen</h2>
+        <h2 class="text-center">Aanpassen</h2>
       </div>
-        <div class="left-right col-xs-2">
-        <button id="audioCapture" class="btn-header"><i class="fa fa-microphone fa-gradient"></i></button>
-      </div>
+        <div class="col-xs-2 right-header">
+			<h2>
+				<button id="deletepopup" class="btn-header">
+					<i class="fa fa-trash fa-gradient"></i>
+				</button>
+			</h2>
+		</div>
     </div>
 
     <div class="row page">
@@ -50,19 +47,16 @@
       <div class="row">
           <div class="form-group col-xs-12">
           <label for="icon">Icoon:</label>
-          <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle form-control" type="button" id="menu1" data-toggle="dropdown">Select Icon
-            <span class="caret"></span></button>
-            <ul class="dropdown-menu fa-font" role="menu" aria-labelledby="menu1">
-              <li role="presentation"><a role="menuitem" tabindex="-1" id="noodIcon"><input type="radio" id="radio" value="&#xf071;">&#xf073;</input></a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" id="noodIcon">&#xf05a;</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" id="noodIcon">&#xf095;</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" id="noodIcon">&#xf249;</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" id="noodIcon">&#xf030;</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" id="noodIcon">&#xf0fa;</a></li>
-            </ul>
-          </div>
-      </div>
+            <select class="form-control loginfield fa-font" name="icon" id="noodIcon">
+							<option value="&#xf071;">&#xf071;</option>
+							<option value="&#xf073;">&#xf073;</option>
+							<option value="&#xf05a;">&#xf05a;</option>
+							<option value="&#xf095;">&#xf095;</option>
+							<option value="&#xf249;">&#xf249;</option>
+							<option value="&#xf030;">&#xf030;</option>
+              <option>&#xf0fa;</option>
+            </select>
+        </div>
 
       <div class="row">
         <div class="form-group col-xs-12">
@@ -109,7 +103,7 @@
             </select>
         </div>
       </div>
-         
+      
       <div class="row add-show">
         <div class="form-group col-xs-12">
           <label for="inputFile">Bestanden toevoegen:</label>
@@ -117,9 +111,7 @@
         </div>
       </div>
       </div>
-        
-        <audio id="audiodiv" controls></audio>
-        
+
       <!-- button -->
       <div class="row">
         <div class="col-xs-12 text-center add-hide">
@@ -127,7 +119,7 @@
         </div>
 
         <div class="col-xs-6 text-center">
-          <button type="button" onclick="addEmergencyItem()" class="btn btn-danger loginbutton">Opslaan</button>
+          <button type="button" onclick="editEmergencyItem()" class="btn btn-danger loginbutton">Aanpassen</button>
         </div>
           <div class="col-xs-6 text-center">
           <button type="button" onclick="javascript:history.back()" class="btn btn-danger loginbutton">Annuleren</button>
@@ -146,14 +138,15 @@
     <script src="js/pouchdb.min.js"></script>
     <script src="js/pouchdb.authentication.min.js"></script>
     <script src="js/pouchdb.find.min.js"></script>
-   <!-- <script src="js/events.js"></script>-->
+    <script src="js/events.js"></script>
     <script src="js/expand.js"></script>
     <script src="js/globals.js"></script>
-      <script src="js/audio.js"></script>
-    <script src="js/add-emergency-item.js"></script>
+      <script src="js/edit-emergency-item.js"></script>
       <script>
-       document.getElementById("audioCapture").addEventListener("click", audioCapture);
-
-      </script>
+      setTimeout(function(){fillInfo()},800);
+          
+  	document.getElementById("deletepopup").addEventListener
+  	("click", deletepopup);
+	</script>
   </body>
 </html>

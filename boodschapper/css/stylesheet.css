@@ -1,0 +1,108 @@
+/* Header */
+.page-header {
+  margin: 0;
+  background-color: #fff;
+  box-shadow: 0 0 20px #999;
+}
+
+.fa-angle-left {
+  font-weight: bolder;
+}
+
+.fa-gradient {
+	background: linear-gradient(to bottom right, #5F77D2, #7B8CD6);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* Page */
+.page {
+  margin: 0;
+  padding: 0;
+}
+
+.tile {
+  box-sizing: border-box;
+  border: 2px solid #fff;
+}
+
+p > .fa {
+  color: #fff;
+  font-size: 8em;
+  margin: 0.25em 0;
+  text-align: center;
+}
+
+.calendar {
+  background: linear-gradient(#FABC18, #FAD15D);
+}
+
+.warning {
+  background: linear-gradient(#E72B12, #EB6E6A);
+}
+
+.information {
+  background: linear-gradient(#3DC2D9, #8FCEE2);
+}
+
+.call {
+  background: linear-gradient(#7CBD1B, #B0D248);
+}
+
+.notes {
+  background: linear-gradient(#FA681A, #FA965E);
+}
+
+.camera {
+  background: linear-gradient(#5B16E7, #8A6CEB);
+}
+
+/* Extra small devices (phones, col-xs) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, col-sm and up) */
+@media (min-width: 768px) {
+  .tile {
+    border: 2px solid #fff;
+  }
+
+  p > .fa {
+    font-size: 8em;
+    margin: 0.25em 0;
+  }
+
+}
+
+/* Medium devices (desktops, col-md and up) */
+@media (min-width: 992px) {
+  .tile {
+    border: 2px solid #fff;
+  }
+
+  p > .fa {
+    font-size: 8em;
+    margin: 0.25em 0;
+  }
+
+}
+
+/* Large devices (large desktops, col-lg and up) */
+@media (min-width: 1200px) {
+  .tile {
+    border: 3px solid #fff;
+  }
+
+  p > .fa {
+    font-size: 9em;
+    margin: 0.7em 0;
+  }
+
+}
+
+.pass-tools, .pass-forgot {
+  margin-top: 25px;
+}
+
+.pass-text {
+  text-align: center;
+}

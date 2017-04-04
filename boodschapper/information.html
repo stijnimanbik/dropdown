@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <title>Informatie | Boodschapper app</title>
+    <link rel=icon href=img/logo.jpeg>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/information.css">
+  </head>
+  <body>
+    <div class="page-header row navbar-fixed-top">
+      <div class="left-header col-xs-2">
+        <h2 class="text-center"><a href="menu.html"><i class="fa fa-angle-left fa-gradient" aria-hidden="true"></i></a></h2>
+      </div>
+      <div class="mid-header col-xs-8">
+        <h2 class="text-center">Informatie</h2>
+      </div>
+      <div class="right-header col-xs-2">
+        <h2 class="text-center"><a href="information-add-item.html"><i class="fa fa-plus fa-gradient" aria-hidden="true"></i></a></h2>
+      </div>
+    </div>
+
+    <div class="row page">
+        
+        <ul id="info-list"></ul>
+
+    </div>
+
+    <div class="row page-footer navbar-fixed-bottom">
+      <div class="footer-tile calendar col-xs-3 text-center">
+        <a class="menu-icon" href="calendar-day.html"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i></a>
+      </div>
+      <div class="footer-tile warning col-xs-3 text-center">
+        <a class="menu-icon" href="emergency.html"><i class="fa fa-exclamation-triangle fa-fw" aria-hidden="true"></i></a>
+      </div>
+      <div class="footer-tile information col-xs-3 text-center">
+        <a class="menu-icon" href="#"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i></a>
+      </div>
+      <div class="footer-tile call col-xs-3 text-center">
+        <a class="menu-icon" href="contacts.html"><i class="fa fa-phone fa-fw" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-tile information col-xs-3 text-center opened">
+      <a class="menu-icon" href="#"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i></a>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.1.1.slim.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Javascript -->
+    <script src="js/pouchdb.min.js"></script>
+    <script src="js/pouchdb.authentication.min.js"></script>
+    <script src="js/pouchdb.find.min.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/globals.js"></script>
+    <script src="js/show-information-items.js"></script>
+     
+      
+  </body>
+    <script>
+        window.addEventListener('databaseReady', function() {
+    			showInformationItems();
+				});
+    </script>
+</html>

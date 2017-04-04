@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <title>Registreren | Boodschapper app</title>
+    <link rel=icon href=img/logo.jpeg>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+  </head>
+ <body>
+
+
+
+      <!-- header -->
+        <div class="page-header row navbar-fixed-top">
+          <div class="left-header col-xs-2">
+            <h2 class="text-center"><a href="index.html"><i class="fa fa-angle-left fa-gradient" aria-hidden="true"></i></a></h2>
+          </div>
+          <div class="mid-header col-xs-8">
+            <h2 class="text-center">Registreren</h2>
+          </div>
+      </div>
+
+      <!-- input -->
+      <div class="container page-container">
+        <div class="row page">
+          <div class="form-group col-xs-12">
+            <label for="newUserName">Gebruikersnaam:</label>
+            <input type="text" class="form-control regfield" name="newUserName" id="newUserName" placeholder="Gebruikersnaam">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-xs-12">
+            <label for="newUserEmail">E-mailadres:</label>
+            <input type="text" class="form-control regfield" name="newUserEmail" id="newUserEmail" placeholder="E-mailadres">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-xs-12">
+            <label for="newUserPassword">Wachtoord:</label>
+            <input type="password" class="form-control regfield" name="newUserPassword" id="newUserPassword" placeholder="Wachtwoord">
+          </div>
+        </div>
+
+        <!-- button -->
+        <div class="row">
+          <div class="col-xs-12 text-center">
+            <button type="button" onclick="createUser()" class="btn btn-primary regbutton">Aanmelden</button>
+          </div>
+        </div>
+      </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.1.1.slim.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Javascript -->
+    <script src="js/pouchdb.min.js"></script>
+    <script src="js/pouchdb.authentication.min.js"></script>
+     <script src="js/pouchdb.find.min.js"></script>
+     <script src="js/globals.js"></script>
+     <script src="js/register-user.js"></script>
+  </body>
+</html>

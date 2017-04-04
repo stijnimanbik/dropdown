@@ -1,21 +1,5 @@
-.fa-font, .dItem {
-    font-family: FontAwesome;
-    src: url("fonts/FontAwesome.otf");
-}
-
-.fa-font:before {
-	display: none;
-}
-
 .row {
   margin: 0;
-}
-.imgtemp {
-  height 200px;
-  width: 200px;
-	margin-top: 30px;
-	border: 1px solid rgba(49, 49, 49, 0.24);
-	box-shadow: 3px 3px 5px rgba(119, 119, 119, 0.6);
 }
 
 /* Header */
@@ -40,47 +24,6 @@
 }
 
 /* Page */
-
-/*Dropdown*/
-.wrapper-dropdown {
-    /* Size and position */
-    position: relative; /* Enable absolute positioning for children and pseudo elements */
-    width: 200px;
-    padding: 10px;
-    margin: 0 auto;
-
-    /* Styles */
-    background: #9bc7de;
-    color: #fff;
-    outline: none;
-    cursor: pointer;
-
-    /* Font settings */
-    font-weight: bold;
-}
-
-.wrapper-dropdown:after {
-    content: "";
-    width: 0;
-    height: 0;
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    margin-top: -6px;
-    border-width: 6px 0 6px 6px;
-    border-style: solid;
-    border-color: transparent #fff;    
-}
-
-.wrapper-dropdown-1 .dropdown li a {
-    display: block;
-    text-decoration: none;
-    color: #9e9e9e;
-    padding: 10px 20px;
-}
-
-/*/dropdown */
-
 .page {
   margin: 80px 0;
   padding: 0;
@@ -98,17 +41,13 @@
   height: 50px;
   text-align: center;
   font-size: 22px;
-  border: 3px solid #E72B12;
-  background: linear-gradient(to bottom right, rgba(231, 43, 18, 0.4), rgba(235, 110, 106, 0.4));
-}
-
-option {
-	background-color: #f6b6af;
+  border: 3px solid #FA681A;
+  background: linear-gradient(to bottom right, rgba(250, 104, 26, 0.4), rgba(250, 150, 94, 0.4));
 }
 
 .form-control:focus {
-  border-color: #E72B12;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(231, 43, 18, 0.6);
+  border-color: #FA681A;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(250, 104, 26, 0.6);
 }
 
 .loginbutton {
@@ -116,7 +55,13 @@ option {
   max-width: 350px;
   width: 100%;
   font-size: 18px;
-  background: linear-gradient(to right, #E72B12, #EB6E6A);
+  background: linear-gradient(to right, #FA681A, #FA965E);
+	border-color: #FA681A;
+}
+
+.loginbutton:hover, .loginbutton:focus {
+  background: linear-gradient(to right, #FA681A, #FA965E);
+	border-color: #FA681A;
 }
 
 .item-text, .item-text:hover, .item-text:visited {
@@ -159,16 +104,20 @@ a > p > .fa {
   background: linear-gradient(#E72B12, #EB6E6A);
 }
 
-.warning-item {
-  background: linear-gradient(to right, #E72B12, #EB6E6A);
-}
-
 .information {
   background: linear-gradient(#3DC2D9, #8FCEE2);
 }
 
 .call {
   background: linear-gradient(#7CBD1B, #B0D248);
+}
+
+.note {
+  background: linear-gradient(to right, #FA681A, #FA965E);
+}
+
+.note-item {
+  background: linear-gradient(to right, #FA681A, #FA965E);
 }
 
 .footer-tile {
@@ -225,7 +174,7 @@ ol, ul {
 }
 
 .content-row {
-  background: linear-gradient(to right, #F9CAC4, #FADBDA);
+  background: linear-gradient(to right, #FED9C6, #FEE5D7);
 	margin: 0 5px -10px 5px;
 	padding: 10px 0;
 	
@@ -235,13 +184,13 @@ ol, ul {
 	display: none;
 }
 
-	.full-item {
-		margin: 0 auto;
-}
-
 .btn-header {
 	border: none;
 	background: none;
+}
+
+	.full-item {
+		margin: 0 auto;
 }
 
 @media only screen and (min-width:376px) and (max-width: 770px)  {
@@ -266,4 +215,3 @@ ol, ul {
   }
 
 }
-

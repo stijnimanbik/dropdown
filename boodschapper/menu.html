@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <title>Hoofdmenu | Boodschapper app</title>
+    <link rel=icon href=img/logo.jpeg>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+  </head>
+  <body>
+    <div class="page-header row">
+      <div class="left-header col-xs-2">
+        <h2 class="text-center" onclick="logoutUser()"><i class="fa fa-sign-out fa-flip-horizontal fa-gradient" aria-hidden="true"></i></h2>
+      </div>
+      <div class="mid-header col-xs-8">
+        <h2 class="text-center">Hoofdmenu</h2>
+      </div>
+      <div class="right-header col-xs-2">
+        <h2 class="text-center"><a href="change-email.html"><i class="fa fa-gear fa-gradient" aria-hidden="true"></i></a></h2>
+      </div>
+    </div>
+
+  <div class="row page">
+      <div class="calendar tile col-xs-6 col-md-4">
+        <a class="text-center" href="calendar-day.html"><p><i class="fa fa-calendar" aria-hidden="true"></i></p></a>
+      </div>
+      <div class="warning tile col-xs-6 col-md-4">
+        <a class="text-center" href="emergency.html"><p><i class="fa fa-exclamation-triangle fa-fw" aria-hidden="true"></i></p></a>
+      </div>
+      <div class="information tile col-xs-6 col-md-4">
+        <a class="text-center" href="information.html"><p><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i></p></a>
+      </div>
+      <div class="call tile col-xs-6 col-md-4">
+        <a class="text-center" href="contacts.html"><p><i class="fa fa-phone fa-fw" aria-hidden="true"></i></p></a>
+      </div>
+      <div class="notes tile col-xs-6 col-md-4">
+        <a class="text-center" href="notes.html"><p><i class="fa fa-sticky-note fa-fw" aria-hidden="true"></i></p></a>
+      </div>
+      <div class="camera tile col-xs-6 col-md-4">
+        <a class="text-center" id="cameraTakePicture"><p><i class="fa fa-camera fa-fw" aria-hidden="true"></i></p></a>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.1.1.slim.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Javascript -->
+    <script src="js/pouchdb.min.js"></script>
+    <script src="js/pouchdb.authentication.min.js"></script>
+    <script src="js/pouchdb.find.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/globals.js"></script>
+    <script src="js/login-user.js"></script>
+    <script src="js/camera.js"></script>
+    <script>
+      document.getElementById("cameraTakePicture").addEventListener("click", cameraTakePicture); 
+    </script>
+  </body>
+</html>

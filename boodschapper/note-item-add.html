@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <title>Toevoegen | Boodschapper app</title>
+    <link rel=icon href=img/logo.jpeg>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/note.css">
+  </head>
+  <body>
+    <div class="page-header row navbar-fixed-top">
+      <div class="left-header col-xs-2">
+        
+      </div>
+      <div class="mid-header col-xs-8">
+        <h2 class="text-center">Toevoegen</h2>
+      </div>
+    </div>
+
+    <div class="row page">
+    <div class="container page-container">
+      <div class="row">
+        <div class="form-group col-xs-12">
+          <label for="noodTitle">Titel:</label>
+          <input type="text" class="form-control loginfield" name="noteDesc" id="noteTitle" placeholder="Titel">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-xs-12">
+          <label for="noodDesc">Notitie:</label>
+          <textarea type="text" class="form-control loginfield" name="noteDesc" id="noteDesc" placeholder="Notitie"></textarea>
+        </div>
+      </div>
+      </div>
+
+      <!-- button -->
+      <div class="row">
+        <div class="col-xs-6 text-center">
+          <button type="button" onclick="addNoteItem()" class="btn btn-danger loginbutton">Opslaan</button>
+        </div>
+          <div class="col-xs-6 text-center">
+          <button type="button" onclick="javascript:history.back()" class="btn btn-primary loginbutton">Annuleren</button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.1.1.slim.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Javascript -->
+    <script src="js/pouchdb.min.js"></script>
+    <script src="js/pouchdb.authentication.min.js"></script>
+    <script src="js/pouchdb.find.min.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/expand.js"></script>
+    <script src="js/globals.js"></script>
+    <script src="js/add-note-item.js"></script>
+  </body>
+</html>
